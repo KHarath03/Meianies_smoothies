@@ -1,5 +1,5 @@
 #requirements.txt
-name:  
+name: sf_env
 channels:
     snowflake
 dependencies:
