@@ -6,7 +6,7 @@ from snowflake.snowpark.functions import col
 cnx =st.connection("snowflake")
 session =cnx.session()
 
-st.title("Customize your smoothie:")
+st.title("My Parents new healthy smoothie menu:")
 st.write(""" Choose fruit in your Smoothie""")
 
 order_name =st.text_input("Name your smoothie:")
