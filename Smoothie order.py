@@ -2,10 +2,8 @@
 # Import python packages.
 import streamlit as st 
 from snowflake.snowpark.functions import col
-# new section to display  Smoothiefrootnutrition infor
 import requests  
-smoothiefroot_response = requests.get("[https://my.smoothiefroot.com/api/fruit/watermelon](https://my.smoothiefroot.com/api/fruit/watermelon)")  
-st.text(smoothiefroot_response.json())
+
 
 cnx =st.connection("snowflake")
 session =cnx.session()
@@ -35,7 +33,10 @@ if ingradients_list:
                     values ('""" + ingradients_string + """' , '""" + order_name + """')"""
 
     #st.write(my_insert_stmt)
-    
+
+smoothiefroot_response = requests.get("[https://my.smoothiefroot.com/api/fruit/watermelon](https://my.smoothiefroot.com/api/fruit/watermelon)")  
+sf_df = st.dataframe(data =smoothifroot_response.json(), user_container_width= true)
+
     if time_to_insert:
         session.sql(my_insert_stmt).collect()
         
