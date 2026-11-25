@@ -1,19 +1,4 @@
 #requirements.txt
-name: sf_env
-channels:
-    snowflake
-dependencies:
-    python=3.11
-    streamlit
-    snowflake-snowpark-python
-    pandas
-  streamlit_app:
-    type: streamlit
-    main_file: Smoothie order.py
-    title: My Parents new healthy smoothie menu
-    query_warehouse: COMPUTE_WH
-    compute_pool: SYSTEM_COMPUTE_POOL_CPU
-    artifacts:
-      - pyproject.toml
-      - Smoothie order.py
-      - .streamlit/config.toml
+streamlit
+snowflake-snowpark-python
+pandas
