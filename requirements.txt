@@ -1,5 +1,5 @@
 #requirements.txt
-name: my_firstapp  
+name:  
 channels:
     snowflake
 dependencies:
