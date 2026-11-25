@@ -34,8 +34,8 @@ if ingradients_list:
                     values ('""" + ingradients_string + """' , '""" + order_name + """')"""
 
       if time_to_insert:
-      session.sql(my_insert_stmt).collect()
+        session.sql(my_insert_stmt).collect()
         
-      st.success(f" {order_name} Your Smoothie is ordered!'.", icon="✅")
+        st.success(f" {order_name} Your Smoothie is ordered!'.", icon="✅")
 
         
