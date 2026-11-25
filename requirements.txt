@@ -1,5 +1,5 @@
 #requirements.txt
-definition_version: 2
+definition_version:2:
 snowflake-snowpark-python
 streamlet
 entities:
