@@ -28,7 +28,7 @@ if ingradients_list:
         ingradients_string += fruit_chosen + ' '
         smoothiefroot_response = requests.get("[https://my.smoothiefroot.com/api/fruit/watermelon](https://my.smoothiefroot.com/api/fruit/watermelon)")  
         sf_df = st.dataframe(data =smoothifroot_response.json(), user_container_width= true)
-# st.write(ingradients_string)
+ 
     time_to_insert =st.button("Submit Order")
     
     my_insert_stmt = """ insert into smoothies.public.orders(ingredients,Name_on_order)
@@ -36,9 +36,9 @@ if ingradients_list:
 
     #st.write(my_insert_stmt)
 
-  if time_to_insert:
-        session.sql(my_insert_stmt).collect()
+if time_to_insert:
+      session.sql(my_insert_stmt).collect()
         
-        st.success(f" {order_name} Your Smoothie is ordered!'.", icon="✅")
+      st.success(f" {order_name} Your Smoothie is ordered!'.", icon="✅")
 
         
