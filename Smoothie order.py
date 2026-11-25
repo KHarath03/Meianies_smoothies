@@ -35,7 +35,7 @@ if ingradients_list:
 
     if time_to_insert:
       session.sql(my_insert_stmt).collect()
-      time_to_insert =st.button("Submit Order")
+    time_to_insert =st.button("Submit Order")
       st.success(f" {order_name} Your Smoothie is ordered!'.", icon="✅")
 
         
