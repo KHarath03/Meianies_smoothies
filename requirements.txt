@@ -1,5 +1,5 @@
 #requirements.txt
-name: 
+name: my_firstapp  
 channels:
   - snowflake
 dependencies:
@@ -10,7 +10,7 @@ dependencies:
   streamlit_app:
     type: streamlit
     main_file: Smoothie order.py
-    title: Custom Smootie Order form
+    title: My Parents new healthy smoothie menu
     query_warehouse: COMPUTE_WH
     compute_pool: SYSTEM_COMPUTE_POOL_CPU
     artifacts:
