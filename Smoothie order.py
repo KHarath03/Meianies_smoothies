@@ -26,7 +26,7 @@ if ingradients_list:
       ingradients_string += fruit_chosen + ' '
       st.subheader(fruit_chosen + 'Nutrition Information')
       smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/" + fruit_chosen)  
-      sf_df = st.dataframe(data =smoothiefroot_response.json(), user_container_width= true)
+      sf_df = st.dataframe(data =smoothiefroot_response.json(), user_container_width= True)
  
       time_to_insert =st.button("Submit Order")
     
