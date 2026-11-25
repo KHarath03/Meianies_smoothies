@@ -1,8 +1,12 @@
 #requirements.txt
-definition_version:2:
-snowflake-snowpark-python
-streamlet
-entities:
+name: 
+channels:
+  - snowflake
+dependencies:
+  - python=3.11
+  - streamlit
+  - snowflake-snowpark-python
+  - pandas
   streamlit_app:
     type: streamlit
     main_file: Smoothie order.py
